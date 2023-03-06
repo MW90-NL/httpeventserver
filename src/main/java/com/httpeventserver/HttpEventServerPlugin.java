@@ -40,7 +40,7 @@ import static java.lang.Integer.parseInt;
         name = "Http Event Server",
         description = "Exposes current player stats, actions and inventory as well as current Enemy NPC stats on <PORT>. Defaults to Port:5050",
         tags = {"status", "npc and player stats", "api", "stats"},
-        enabledByDefault = false
+        enabledByDefault = true
 )
 
 @Slf4j
