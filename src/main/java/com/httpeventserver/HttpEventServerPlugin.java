@@ -349,9 +349,9 @@ public class HttpEventServerPlugin extends Plugin {
         camera.addProperty("x", client.getCameraX());
         camera.addProperty("y", client.getCameraY());
         camera.addProperty("z", client.getCameraZ());
-        camera.addProperty("x2", client.getCameraX2());
-        camera.addProperty("y2", client.getCameraY2());
-        camera.addProperty("z2", client.getCameraZ2());
+        // camera.addProperty("x2", client.getCameraX2());
+        // camera.addProperty("y2", client.getCameraY2());
+        // camera.addProperty("z2", client.getCameraZ2());
 
         playerObject.add("playerCoordinates", playerCoordinates);
         npcObject.add("npcCoordinates", npcCoordinates);
