@@ -101,7 +101,7 @@ public class HttpEventServerPlugin extends Plugin {
     protected void startUp() throws Exception {
 
         String HttpPort = config.apiPort();
-        System.out.println("HttpEventServer plugin running on Port: " + HttpPort);
+        log.info("HttpEventServer plugin running on Port: {}", HttpPort);
 
         int HttpPortNumber= parseInt(HttpPort);
 
@@ -129,7 +129,6 @@ public class HttpEventServerPlugin extends Plugin {
         msg = event.getMessage();
         msgType = String.valueOf(event.getType());
         msgTick = client.getTickCount();
-        //System.out.println("onChatmsg:" + msg);
     }
 
     @Subscribe
