@@ -105,6 +105,8 @@ public class HttpEventServerPlugin extends Plugin {
 
         int HttpPortNumber= parseInt(HttpPort);
 
+        log.info("Starting HttpEventServer on port {}", HttpPortNumber);
+
         server = HttpServer.create(new InetSocketAddress(HttpPortNumber), 0);
         server.createContext("/inv", handlerForInventory());
         server.createContext("/equip", handlerForEquipment());
@@ -117,6 +119,7 @@ public class HttpEventServerPlugin extends Plugin {
 
     @Override
     protected void shutDown() throws Exception {
+        log.info("Stopping HttpEventServer");
         server.stop(1);
     }
 
