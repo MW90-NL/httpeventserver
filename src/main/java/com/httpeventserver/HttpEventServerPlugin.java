@@ -22,7 +22,6 @@ import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.*;
 import net.runelite.api.events.ChatMessage;
 import net.runelite.api.events.GameTick;
-import net.runelite.api.gameval.InterfaceID;
 import net.runelite.api.widgets.ComponentID;
 import net.runelite.api.widgets.Widget;
 import net.runelite.client.callback.ClientThread;
@@ -162,7 +161,7 @@ public class HttpEventServerPlugin extends Plugin {
     }
 
     private void detectBankWindowClosing(){
-        Widget con = client.getWidget(InterfaceID.BANKMAIN, ComponentID.BANK_ITEM_CONTAINER);
+        Widget con = client.getWidget(ComponentID.BANK_ITEM_CONTAINER);
         if(con != null) {
             lastBankOpenStatus = true;
             lastBankContainer = client.getItemContainer(InventoryID.BANK);
@@ -175,7 +174,7 @@ public class HttpEventServerPlugin extends Plugin {
     }
 
     private void detectShopWindowClosing(){
-        Widget con = client.getWidget(InterfaceID.SHOP, ComponentID.SHOP_INVENTORY_ITEM_CONTAINER);
+        Widget con = client.getWidget(ComponentID.SHOP_INVENTORY_ITEM_CONTAINER);
         if(con != null) {
             lastShopOpenStatus = true;
             shopOpen = Boolean.TRUE;
